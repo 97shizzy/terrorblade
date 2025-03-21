@@ -1,0 +1,79 @@
+.seti {
+	
+	height: auto;
+	width: 333px;
+	
+}
+div {
+	display: absolute;
+	margin: 0;
+	--angle: 0deg;
+	border: 4px solid;
+	border-image: conic-gradient(from var(--angle), purple, pink, purple, pink, lightpink, purple) 1;
+	animation: rotate 3s linear infinite;
+	box-shadow: 0 0 10px pink, 0 0 20px purple, 0 0 30px lightpink, 0 0 50px purple;
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+	margin-top: 7px;
+	z-index: 999999;
+   
+    
+}
+body {
+	
+	background-color: black;
+	justify-content: center; 
+    align-items: center; 
+}
+.imgs {
+	width: 333px;
+	height: auto;
+	
+}
+.lot {
+	margin: 0;
+--angle: 0deg;
+	border: 4px solid;
+	box-shadow: 0 0 10px white, 0 0 20px black, 0 0 30px gray;
+	border-image: conic-gradient(from var(--angle), white, black, white, gray, black, white) 1;
+	animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+	from {
+		--angle: 0deg;
+	}
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.back {
+	border-radius: 15px;
+	text-decoration: none;
+	font-size: 35px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+	
+    width: max-content; 
+    padding: 32px 150px; 
+    background-color: black;
+    box-shadow: 0 0 10px crimson, 0 0 20px crimson;
+    color: white;
+    text-shadow: 0 0 10px gray, 0 0 20px white;
+    margin: 0 auto; 
+	transition: all 0.4s ease;
+	
+}
+.back:hover {
+	transform: scale(1.01);
+}
